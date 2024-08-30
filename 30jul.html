@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let student = {
+        //     firstname:"khushi",
+        //     lastname:"gupta"
+        // };
+        
+        // Object.freeze(student);
+        // student.firstname="Ankita";
+        // console.log(student);
+        // let v=Object.isSealed(student);
+        // console.log(v);
+        // let co=Object.keys(student);
+        // console.log(co);
+        // let co1=Object.values(student);
+        // console.log(co1);
+        let a=document.createElement("div");
+        let a3=document.createElement("div");
+        a.style.backgroundColor="pink";
+        a.style.width="500px";
+        a.style.height="500px";
+        a.style.border="1px solid black";
+        a3.style.backgroundColor="blue";
+        a3.style.width="450px";
+        a3.style.height="450px";
+        a3.style.border="1px solid black";
+        a3.style.margin="20px"
+        a.appendChild(a3);
+        document.body.appendChild(a);
+        console.log(a);
+        let q=document.createElement("p");
+        let w=document.createElement("p");
+        let e=document.createElement("p");
+        a3.appendChild(q);
+        a3.appendChild(w);
+        a3.appendChild(e);
+        q.innerText="hello";
+        w.innerText="hello";
+        e.innerText="hello";
+        let t1=document.createElement("h1");
+        a3.appendChild(t1);
+        let t=document.createElement("h2");
+        let y=document.createElement("h2");
+        let o=document.createElement("h2");
+        t1.appendChild(t);
+        t1.appendChild(y); 
+        t1.appendChild(o);
+        t.innerText="world";
+        y.innerText="khushi";
+        o.innerText="rudra";
+
+
+    </script>
+</body>
+</html>

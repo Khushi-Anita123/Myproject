@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+    <p class="p1"></p>
+    <p class="p1"></p>
+    <p class="p1"></p>
+    </div>
+    
+    <script>
+        let a=document.getElementsByClassName("p1");
+        a[0].innerHTML="hello";
+        a[1].innerHTML="hello2";
+        a[2].innerHTML="hello3";
+        a[0].innerHTML=a[0].innerHTML+" world";
+        a[1].innerHTML=a[1].innerHTML+" world1";
+        a[2].innerHTML=a[2].innerHTML+" world2";
+    </script>
+</body>
+</html>

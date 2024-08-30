@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #div1{
+     width: 500px;
+     height: 400px;
+     border:1px solid black;
+     border-radius: 10px;
+     background-color: aquamarine;
+     position: absolute;
+     top:30px;
+     left: 360px;
+    }
+    #but1
+    {
+        position: absolute;
+        left:348px;
+        top:90px;
+        width: 60px;
+        height: 50px;
+        background-color: rgb(25, 105, 78);;
+        border-radius: 10px;
+        color:white
+    }
+    #div2{
+        position:relative;
+        left: 100px;
+        width: 310px;
+        height: 60px;
+        border:1px solid black;
+        border-radius: 10px;
+        background-color: rgb(9, 102, 71);
+        
+    }
+    #input1{
+        width: 300px;
+        height: 50px;
+        border-radius: 10px;
+        margin: 1px;
+        font-size: larger;
+    }
+    #div3{
+        width:300px;
+        height: 200px;
+        border: 3px solid rgb(10, 129, 68);
+        margin-left: 100px;
+        border-radius: 10px;
+        overflow: auto;
+        
+    }
+    ol li.checked{
+    background: rgb(18, 124, 71);
+    color: white;
+    border-radius: 50px;
+    text-decoration: line-through;
+    }
+    li{
+        background-color: rgb(255, 255, 255);
+        color: rgb(30, 31, 32);
+        border-radius: 50px;
+        margin: 10px;
+        height: 35px;
+        /* width: 100px; */
+        font-size: larger;
+        list-style-type: none;
+        
+    }
+    span{
+        margin-left:100px;
+        font-size: x-large;
+    }
+</style>
+<body>
+    <div id="div1">
+        <h1 style="text-align: center;">To-Do-List &#128521</h1>
+        <div id="div2">
+            <input type="text" placeholder="Enter Tasks..." id="input1">
+        </div>
+        <button type="button" id="but1" >Add</button>
+        <br>
+        <div id="div3">
+            <ol id="list"></ol>
+        </div>
+    </div>
+    <script>
+     let listContainer=document.getElementById("list");
+     let input=document.getElementById("input1");
+     
+     let but=document.getElementById("but1");
+     but.addEventListener("click",function(){
+        if(input.value==="")
+     {
+        alert('Add Your Task');
+     }
+     else{
+        let task = document.createElement('li');
+        task.textContent = input.value;
+        listContainer.appendChild(task);
+
+        let span = document.createElement('span');
+        span.textContent = '\u00d7';
+        task.appendChild(span);
+    }
+    input.value = "";
+    saveData();
+     })
+
+     listContainer.addEventListener('click', (el)=>{
+    if(el.target.tagName == 'LI'){
+        el.target.classList.toggle('checked');
+        saveData();
+    }
+    else if(el.target.tagName == 'SPAN'){
+        el.target.parentElement.remove();
+        saveData();
+    }
+    });
+
+    function saveData(){
+    localStorage.setItem("task",listContainer.innerHTML);
+   }
+
+   function showData(){
+    listContainer.innerHTML = localStorage.getItem('task');
+   }
+
+
+   showData();
+    
+    </script>
+</body>
+</html>

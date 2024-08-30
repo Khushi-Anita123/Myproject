@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    h2{
+        position: absolute;
+        top:10px;
+    }
+    #div1{
+     width:500px;
+     height: 450px;
+     border: 2px solid rgb(154, 152, 152);
+     position: absolute;
+     top:65px;
+     border-radius: 3px;
+    }
+    #select{
+        width: 90px;
+        height: 30px;
+        font-size:medium;
+        margin-left: 410px;
+        position: absolute;
+        top:33px
+    }
+    #div2{
+     width:500px;
+     height: 300px;
+     
+     border-radius: 3px;
+     border: 2px solid rgb(154, 152, 152);
+     position: absolute;
+     top:65px;
+     left: 550px;
+
+    }
+    button{
+        position: absolute;
+        top: 400px;
+        left: 960px;
+        width: 90px;
+        height: 30px;
+        font-size:medium;
+    }
+</style>
+<body>
+    <h2>Type Your Code</h2>
+        <select id="select">
+            <option value="Python" id="Python">Python</option>
+            <option value="Javascript" id="Javascript">Javascript</option>
+            <option value="CPP" id="CPP">CPP</option>
+            <option value="C" id="C">C</option>
+            <option value="Java" id="Java">Java</option>
+        </select>
+    <textarea id="div1" placeholder="# Write Your Code"></textarea> 
+    </textarea>
+    <div id="div2">
+     <p id="p">OUTPUT :</p><br>
+     <br>
+    </div>
+    <button id="btn">Compile</button>
+    <script src="compiler.js"></script>
+</body>
+</html>

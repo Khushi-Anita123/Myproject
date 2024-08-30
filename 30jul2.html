@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="body1">
+    <button id="btn">click me</button>
+    <script>
+        // let flag=1;
+        // function color()
+        // {     
+        //     if(flag!=0)
+        // {
+        //     document.body.style.backgroundColor="black";
+        //     flag--;
+        // }else
+        // {
+        //     document.body.style.backgroundColor="white";
+        // }
+        // }
+        let a=document.getElementById("btn");
+        a.addEventListener("click",color);
+        a.addEventListener("dblclick",color2);
+        function color()
+        {
+            let s =document.getElementById("body1");
+         s.style.backgroundColor="black";
+        }
+        function color2()
+        {
+         let s =document.getElementById("body1");
+         s.style.backgroundColor="white";
+        }
+    </script>
+</body>
+</html>

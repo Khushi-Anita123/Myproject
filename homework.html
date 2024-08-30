@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #heading{
+        margin-top: 0px;
+        text-align: center;
+        background-color: #008080;
+        color: aliceblue;
+        font-family:serif;
+    }
+    #div{
+        width:560px;
+        height:500px;
+        border: 1px solid black;
+        padding: 30px;
+        padding-top: 20px;
+        border:1px solid #008080;
+    }
+    #div8{
+        width:590px;
+        height:550px;
+        border: 1px solid black;
+        border:1px solid #008080;
+        background-color: #008080;
+        
+    }
+    #div1{
+       position:absolute;
+       top:44px;
+       display:flex;
+    }
+    #btn1{
+        border:2px solid #008080;
+        width: 170px;
+        height: 30px;
+        font-family:serif;
+    }
+    #btn{
+        background-color: #e2fefe;
+        border:2px solid #008080;
+        width: 170px;
+        height: 30px;
+        font-family:serif;
+        margin-left: 60px;
+
+    }
+    #heading1{
+       font-weight: 500;
+    }
+    #text{
+        height: 300px;
+        width: 500px;
+    }
+    .b{
+        border: 2px solid #008080  ;
+    }
+    #base{
+        padding: 20px;
+        height: 40px;
+        border: 1px solid black;
+        background-color: #e2fefe;
+    }
+    #po{
+        margin-left: 440px;
+        width: 70px;
+        height: 30px;
+        color: #e2fefe;
+        background-color: #008080;
+        border: 2px solid #008080;
+        border-radius: 5px;;
+    }
+    .div3{
+        visibility:hidden;
+    }
+</style>
+<body>
+    <h1 id="heading">Discussion Portal</h1>
+    <div id="div1">
+    <div id="div8">
+        <div id="base">
+            <button id="btn" type="button">New Question Form</button>
+            <button id="btn" type="button">Search questions...</button></div>
+            <ul>
+                
+            </ul>
+    </div>
+    
+    <div id="div" class="div3">
+        <h1 id="heading1">Welcome to Discussion Portal!</h1>
+        <p>Enter a subject and question to get started</p>
+        <form >
+        <input type="text" placeholder="Enter Subject..." id="btn1" required><br>
+        <br>
+        <textarea name="khushi" id="text" class="b" placeholder="Enter questions..." required></textarea>
+        <button type="submit" id="po">Submit</button>
+        </form>
+        
+    </div>
+    </div>
+    <script>
+//         function getFocus() {
+//   document.getElementById("btn1").focus();
+// }
+let btn =document.querySelector("#btn");
+let visi =document.querySelector(".div3");
+btn.addEventListener("click",function (){
+   visi.style.visibility="visible";
+})
+
+    </script>
+    
+</body>
+</html>
